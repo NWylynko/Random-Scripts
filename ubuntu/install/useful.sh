@@ -1,2 +1,2 @@
 #!/bin/sh
-apt install tree
+apt install tree unzip -y
