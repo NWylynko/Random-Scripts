@@ -11,3 +11,4 @@ docker create \
   -v openvpn-data:/config \
   --restart unless-stopped \
   linuxserver/openvpn-as
+docker start openvpn-as
