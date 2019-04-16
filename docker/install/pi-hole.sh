@@ -4,7 +4,6 @@ IP="${IP:-$IP_LOOKUP}"  # use $IP, if set, otherwise IP_LOOKUP
 IPv6="${IPv6:-$IPv6_LOOKUP}"  # use $IPv6, if set, otherwise IP_LOOKUP
 DOCKER_CONFIGS="$(pwd)"  # Default of directory you run this from, update to where ever.
 
-echo "### Make sure your IPs are correct, hard code ServerIP ENV VARs if necessary\nIP: ${IP}\nIPv6: ${IPv6}"
 docker run -d \
     --name pihole \
     -p 53:53/tcp -p 53:53/udp \
@@ -19,5 +18,4 @@ docker run -d \
     --cap-add=NET_ADMIN \
     diginc/pi-hole:latest
 
-echo -n "Your password for https://${IP}/admin/ is "
-docker logs pihole 2> /dev/null | grep 'password:'
+echo "check docker logs for password"
