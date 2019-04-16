@@ -1,2 +1,2 @@
 #!/bin/sh
-apt install tree unzip git -y
+yum install tree unzip git -y
