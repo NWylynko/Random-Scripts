@@ -1,5 +1,5 @@
 docker volume create --name openvpn-data
-docker create \
+docker run -d \
   --name=openvpn-as \
   --cap-add=NET_ADMIN \
   -e PUID=1000 \
@@ -11,4 +11,3 @@ docker create \
   -v openvpn-data:/config \
   --restart unless-stopped \
   linuxserver/openvpn-as
-docker start openvpn-as
