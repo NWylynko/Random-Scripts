@@ -1,4 +1,4 @@
 #!/bin/sh
-rm -R /root/agario
+rm -R /root/home/agario
 docker stop agario
 docker rm agario
